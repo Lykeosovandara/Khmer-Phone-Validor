@@ -32,3 +32,4 @@ class StatusPhone {
 
   StatusPhone({@required this.phone, @required this.status});
 }
+  
