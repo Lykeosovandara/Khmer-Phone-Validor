@@ -1,8 +1,8 @@
 name: khmer_phone_validator
-description: A new Flutter package project.
-version: 0.0.1
-author:
-homepage:
+description: Validator khmer phone number.
+version: 0.0.2
+author: "Keo Dara <lykeosovandara@gmail.com>"
+homepage: "https://github.com/Lykeosovandara/Khmer-Phone-Validor"
 
 environment:
   sdk: ">=2.1.0 <3.0.0"

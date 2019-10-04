@@ -1,14 +1,16 @@
 # khmer_phone_validator
 
-A new Flutter package project.
+Validator Khmer Phone Number.
 
 ## Getting Started
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+~~~dart
+    var phone = "012123123";
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+      final newPhone = KhmerPhoneValidator.validPhone(phone);
+
+      print(newPhone.phone);
+      /// 855012123123
+      print(newPhone.status);
+      /// true
+~~~
