@@ -1,6 +1,6 @@
 name: khmer_phone_validator
 description: Validator khmer phone number.
-version: 0.0.2
+version: 0.0.3
 author: "Keo Dara <lykeosovandara@gmail.com>"
 homepage: "https://github.com/Lykeosovandara/Khmer-Phone-Validor"
 
