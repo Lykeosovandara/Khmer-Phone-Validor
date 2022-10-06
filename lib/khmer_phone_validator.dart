@@ -1,11 +1,13 @@
 library khmer_phone_validator;
 
-import 'package:flutter/cupertino.dart';
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
 
 /// A Calculator.
 class KhmerPhoneValidator {
   /// If it can valid it will return status [true]
-  static StatusPhone validPhone(String phone) {
+  StatusPhone validPhone(String phone) {
     //Begin with + sign or not with 855, or begin with 0 or not, and has 2 digits from 1 to 9, and has 2 digits of any number
     final pattern = new RegExp(r'^((\+?855)|(0?))([1-9][0-9])(\d{6,7})$');
 
@@ -27,9 +29,26 @@ class KhmerPhoneValidator {
 }
 
 class StatusPhone {
-  bool status;
-  String phone;
+  final bool? status;
+  final String? phone;
 
-  StatusPhone({@required this.phone, @required this.status});
+  StatusPhone({
+    this.status,
+    this.phone,
+  });
+
+  @override
+  String toString() => 'StatusPhone(status: $status, phone: $phone)';
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is StatusPhone &&
+        other.status == status &&
+        other.phone == phone;
+  }
+
+  @override
+  int get hashCode => status.hashCode ^ phone.hashCode;
 }
-  

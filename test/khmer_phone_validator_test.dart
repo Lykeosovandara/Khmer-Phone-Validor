@@ -3,11 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:khmer_phone_validator/khmer_phone_validator.dart';
 
 void main() {
-  test('adds one to input values', () {
-    final calculator = Calculator();
-    expect(calculator.addOne(2), 3);
-    expect(calculator.addOne(-7), -6);
-    expect(calculator.addOne(0), 1);
-    expect(() => calculator.addOne(null), throwsNoSuchMethodError);
+  test('Validating Testing', () {
+    final validator = KhmerPhoneValidator();
+    expect(validator.validPhone("023132131").status, true);
+    expect( validator.validPhone("23dawd").status, false);
   });
 }
